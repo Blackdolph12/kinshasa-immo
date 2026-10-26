@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kinshasa Immo - 24 Communes - REAL PHOTOS</title>
+<style>
+:root{--navy:#0a1931;--gold:#c9a86a;--green:#25D366;--bg:#fdfaf3}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
+body{background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
+.logo{font-weight:900;font-size:20px}.logo span{color:var(--gold)}
+.btn{padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.hero{background:linear-gradient(rgba(10,25,49,.9),rgba(10,25,49,.6)),url(https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400);background-size:cover;color:#fff;text-align:center;padding:32px 5%}
+.search{background:#fff;padding:12px;border-radius:14px;max-width:1000px;margin:16px auto 0;display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:8px}
+.search select{padding:11px;border:1px solid #ddd;border-radius:8px}
+.bar{background:var(--navy);color:var(--gold);padding:8px;font-size:11px;text-align:center}
+.layout{display:grid;grid-template-columns:2.3fr .9fr;gap:16px;padding:16px 5%}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.card img{width:100%;height:220px;object-fit:cover}
+.badge{position:absolute;margin:8px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px}
+.card-body{padding:12px}.price{color:var(--gold);font-weight:900;font-size:18px}.meta{font-size:13px;color:#666}
+.agent{background:#fff;border:2px solid var(--gold);border-radius:16px;padding:16px;text-align:center;position:sticky;top:70px}
+.agent img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}
+.wa{display:block;background:var(--green);color:#fff;padding:12px;border-radius:10px;text-decoration:none;font-weight:800;margin:8px 0;text-align:center}
+.admin{display:none;background:#fff;border-radius:14px;padding:16px;margin:16px 5%;border:2px dashed var(--gold)}
+.admin input,.admin select,.admin textarea{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:8px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.search{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="logo">KINSHASA <span>IMMO</span></div><div style="display:flex;gap:8px"><button class="btn btn-outline" onclick="toggleAdmin()">Admin</button><a class="btn btn-gold" href="https://wa.me/243823043089">Publier</a></div></header>
+<div class="bar">24 COMMUNES: Bandalungwa • Barumbu • Bumbu • Gombe • Kalamu • Kasa-Vubu • Kimbanseke • Kinshasa • Kintambo • Kisenso • Lemba • Limete • Lingwala • Makala • Maluku • Masina • Matete • Mont Ngafula • Ndjili • Ngaba • Ngaliema • Ngiri-Ngiri • Nsele • Selembao</div>
+<div class="hero"><h1>24 Communes - Vraies Maisons Kinshasa</h1><p>Photos Réelles - Clementine Bola - Fondatrice Vérifiée ✓</p>
+<div class="search">
+<select id="f-commune"><option value="">Toutes les 24 communes</option><option>Bandalungwa</option><option>Barumbu</option><option>Bumbu</option><option>Gombe</option><option>Kalamu</option><option>Kasa-Vubu</option><option>Kimbanseke</option><option>Kinshasa</option><option>Kintambo</option><option>Kisenso</option><option>Lemba</option><option>Limete</option><option>Lingwala</option><option>Makala</option><option>Maluku</option><option>Masina</option><option>Matete</option><option>Mont Ngafula</option><option>Ndjili</option><option>Ngaba</option><option>Ngaliema</option><option>Ngiri-Ngiri</option><option>Nsele</option><option>Selembao</option><option>Ma Campagne</option></select>
+<select id="f-type"><option value="">Type</option><option>Villa</option><option>Appartement</option><option>Terrain</option></select>
+<select id="f-budget"><option value="">Budget max</option><option value="50000">50k $</option><option value="100000">100k $</option><option value="250000">250k $</option><option value="500000">500k $</option></select>
+<button class="btn btn-gold" onclick="doFilter()">Rechercher</button>
+</div></div>
+<div id="adminPanel" class="admin"><h3>Admin - 24 Communes - Pass: clementine2024</h3><input id="a-pass" type="password" placeholder="Mot de passe"><input id="a-title" placeholder="Titre"><select id="a-commune"><option>Bandalungwa</option><option>Barumbu</option><option>Bumbu</option><option>Gombe</option><option>Kalamu</option><option>Kasa-Vubu</option><option>Kimbanseke</option><option>Kinshasa</option><option>Kintambo</option><option>Kisenso</option><option>Lemba</option><option>Limete</option><option>Lingwala</option><option>Makala</option><option>Maluku</option><option>Masina</option><option>Matete</option><option>Mont Ngafula</option><option>Ndjili</option><option>Ngaba</option><option>Ngaliema</option><option>Ngiri-Ngiri</option><option>Nsele</option><option>Selembao</option></select><select id="a-type"><option>Villa</option><option>Appartement</option><option>Terrain</option></select><input id="a-price" type="number" placeholder="Prix USD"><input id="a-img" placeholder="Lien image réelle https://..."><textarea id="a-desc" placeholder="Description"></textarea><button class="btn btn-gold" onclick="addProperty()">+ Publier</button><button class="btn btn-outline" onclick="resetData()">Reset</button><div id="adminList"></div></div>
+<div class="layout"><div><div class="grid" id="grid"></div></div><div><div class="agent"><span style="font-size:11px;background:#0a1931;color:#c9a86a;padding:3px 10px;border-radius:20px;font-weight:700">24 COMMUNES ✓</span><br><br><img id="mamaPhoto" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300" alt="Clementine"><h3>Clementine Bola</h3><p style="color:#c9a86a;font-weight:700">Fondatrice Vérifiée</p><p style="font-size:12px">24 Communes • 10+ ans<br>+243 823 043 089</p><input type="file" id="mamaUpload" accept="image/*" style="font-size:11px"><br><a class="wa" href="https://wa.me/243823043089">💬 WhatsApp</a><div style="font-size:10px;text-align:left;background:#fdfaf3;padding:8px;border-radius:8px;margin-top:8px"><b>24 Communes:</b> Bandalungwa, Barumbu, Bumbu, Gombe, Kalamu, Kasa-Vubu, Kimbanseke, Kinshasa, Kintambo, Kisenso, Lemba, Limete, Lingwala, Makala, Maluku, Masina, Matete, Mont Ngafula, Ndjili, Ngaba, Ngaliema, Ngiri-Ngiri, Nsele, Selembao</div></div></div></div>
+<script>
+const defaultProps=[
+{price:1250000,commune:'Gombe',type:'Villa',title:'Villa piscine - Gombe',ch:'5 ch • 620m²',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',badge:'À VENDRE',desc:'Piscine, fleuve.'},
+{price:680000,commune:'Ngaliema',type:'Villa',title:'Villa collines - Ngaliema',ch:'4 ch • 480m²',img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',badge:'À VENDRE',desc:'Calme.'},
+{price:320000,commune:'Lemba',type:'Villa',title:'Villa familiale - Lemba',ch:'4 ch • 350m²',img:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',badge:'À VENDRE',desc:'Lemba.'},
+{price:195000,commune:'Mont Ngafula',type:'Villa',title:'Villa jardin - Mont Ngafula',ch:'3 ch • 300m²',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',badge:'À VENDRE',desc:'Air frais.'},
+{price:480000,commune:'Gombe',type:'Appartement',title:'Appartement vue fleuve - Gombe',ch:'3 ch • 185m²',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',badge:'À VENDRE',desc:'Standing.'},
+{price:950,commune:'Bandalungwa',type:'Appartement',title:'Appartement - Bandalungwa',ch:'2 ch • 85m²',img:'https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800',badge:'À LOUER',desc:'Calme.'},
+{price:210000,commune:'Masina',type:'Terrain',title:'Terrain - Masina',ch:'1500m²',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',badge:'À VENDRE',desc:'Clôturé.'},
+{price:85000,commune:'Mont Ngafula',type:'Terrain',title:'Terrain - Mont Ngafula',ch:'800m²',img:'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800',badge:'À VENDRE',desc:'Calme.'}
+];
+let props=JSON.parse(localStorage.getItem('kin_24_final')||'null')||defaultProps;
+const grid=document.getElementById('grid');
+function render(list){grid.innerHTML='';list.forEach(function(p){grid.innerHTML+='<div class="card"><div style="position:relative"><span class="badge" style="left:0;background:#0a1931;color:#c9a86a">'+p.type+'</span><span class="badge" style="left:70px">'+p.badge+'</span><span class="badge" style="right:0;background:#fff;color:#0a1931">'+p.commune+'</span><img src="'+p.img+'"></div><div class="card-body"><div class="price">'+p.price.toLocaleString()+' USD</div><b>'+p.title+'</b><div class="meta">📍 '+p.commune+' • '+p.ch+'</div><p style="font-size:12px">'+p.desc+'</p><a href="https://wa.me/243823043089?text='+encodeURIComponent(p.title)+'" style="display:block;margin-top:8px;background:#25D366;color:#fff;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:700">💬 WhatsApp</a></div></div>'});renderAdminList()}
+function doFilter(){var c=document.getElementById('f-commune').value,t=document.getElementById('f-type').value,b=document.getElementById('f-budget').value,f=props.filter(function(p){return (!c||p.commune==c)&&(!t||p.type==t)&&(!b||p.price<=b)});render(f)}
+function toggleAdmin(){var p=document.getElementById('adminPanel');p.style.display=p.style.display=='block'?'none':'block'}
+function addProperty(){if(document.getElementById('a-pass').value!='clementine2024'){alert('Pass incorrect');return}var np={title:document.getElementById('a-title').value||'Nouvelle',commune:document.getElementById('a-commune').value,type:document.getElementById('a-type').value,price:parseInt(document.getElementById('a-price').value||'0'),ch:'',img:document.getElementById('a-img').value||'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',badge:'À VENDRE',desc:document.getElementById('a-desc').value};props.unshift(np);localStorage.setItem('kin_24_final',JSON.stringify(props));render(props)}
+function resetData(){if(confirm('Reset?')){localStorage.removeItem('kin_24_final');props=defaultProps.slice();render(props)}}
+function renderAdminList(){var l=document.getElementById('adminList');l.innerHTML='<b>Biens ('+props.length+')</b><br>';props.forEach(function(p,i){l.innerHTML+='<div style="font-size:12px;padding:3px 0;border-bottom:1px solid #eee">'+p.commune+': '+p.title.substring(0,18)+' <button onclick="props.splice('+i+',1);localStorage.setItem(\'kin_24_final\',JSON.stringify(props));render(props)" style="color:red;border:none;background:none">X</button></div>'})}
+var saved=localStorage.getItem('mama_photo');if(saved){document.getElementById('mamaPhoto').src=saved}
+document.getElementById('mamaUpload').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){document.getElementById('mamaPhoto').src=ev.target.result;localStorage.setItem('mama_photo',ev.target.result)};r.readAsDataURL(f)});
+render(props);
+</script></body></html>
